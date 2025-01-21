@@ -867,7 +867,7 @@ public:
    * @return true on success
    */
     template <typename ST>
-    static bool DeserializeEvalAutomorphismKey(std::ostream& ser, const ST& sertype, const std::string& keyID,
+    static bool DeserializeEvalAutomorphismKey(std::istream& ser, const ST& sertype, const std::string& keyID,
                                                const std::vector<uint32_t>& indexList) {
         if (!indexList.size())
             OPENFHE_THROW("indexList may not be empty");
