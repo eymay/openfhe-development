@@ -885,8 +885,8 @@ public:
         // create a new map with evalkeys for the specified indices
         std::map<usint, EvalKey<Element>> newMap;
         for (const uint32_t indx : indexList) {
-            const auto& key = keyMapIt->find(indx);
-            if (key == keyMapIt->end()) {
+            const auto& key = keyMapIt->second->find(indx);
+            if (key == keyMapIt->second->end()) {
                 OPENFHE_THROW("No automorphism key generated for index [" + std::to_string(indx) + "] within keyID [" +
                               keyID + "].");
             }
